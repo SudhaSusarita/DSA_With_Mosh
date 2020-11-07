@@ -29,7 +29,29 @@ public class Array {
             items=tempArray;
         }
         //find the empty slot int the array box
-        /*have a count variable in insert method & it ll increase only when values are added*/
+        /*have a entry variable in insert method & it ll increase only when values are added*/
         items[entry++]=element;
+    }
+
+    public void remove(int index){
+        //validate if index exists
+        if(index>0 && index <=entry){
+            //replace the index's element with next index element
+            for(int i=index;i<entry;i++){
+                items[i]=items[i+1];
+            }
+        }
+        //still there ll be an empty last element
+        //dec entry because an entry is deleted
+        entry--;
+    }
+    public int indexOf(int element){
+        //loop throughout the items n search for the element match
+        //return the index if found else -1;
+        for(int i=0;i<entry;i++){
+            if(items[i]==element)
+                return i;
+        }
+        return -1;
     }
 }
