@@ -12,7 +12,10 @@ public class DynamicArray {
         numbers.insert(50);
         numbers.insert(60);
         numbers.insert(70);
+        numbers.remove(5);
 
         numbers.print();
+        System.out.println("Index: "+numbers.indexOf(70));
+
     }
 }
